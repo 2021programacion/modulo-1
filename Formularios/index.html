@@ -55,32 +55,34 @@
             }
         </script>
 
+        <h5>One more time... definicion de otra función o rutina</h5>
+        <label for="enumerar">Enumerar elementos hasta: </label>
+        <input type="number" id="enumerar">
+        <button onclick="Rutina3()">Accion 3</button>
+        <ul id="lista-dinamica"></ul>
+        <script>
+            function Rutina3() {
+                let cant= document.getElementById("enumerar").value;
+
+                for(var i = 0; i < cant; i++){ 
+                    // Muestra la "evolucion" de la variable i a lo largo del ciclo
+                    console.log(i)
+
+                    // elemento donde vamos a incorporar los <li>
+                    var lista = document.getElementById("lista-dinamica");
+                    // Creamos el <li>
+                    var li = document.createElement("li");
+                    // Agregamos numero de la iteracion al <li>
+                    li.textContent = i;
+                    // Finalmente incorporamos al <ul>
+                    lista.appendChild(li);
+                }
+            }
+        </script>
+
     </form>
     
-    <h5>One more time... definicion de otra función o rutina</h5>
-    <label for="enumerar">Enumerar elementos hasta: </label>
-    <input type="number" id="enumerar">
-    <button onclick="Rutina3()">Accion 3</button>
-    <ul id="lista-dinamica"></ul>
-    <script>
-        function Rutina3() {
-            let cant= document.getElementById("enumerar").value;
 
-            for(var i = 0; i < cant; i++){ 
-                // Muestra la "evolucion" de la variable i a lo largo del ciclo
-                console.log(i)
-
-                // elemento donde vamos a incorporar los <li>
-                var lista = document.getElementById("lista-dinamica");
-                // Creamos el <li>
-                var li = document.createElement("li");
-                // Agregamos numero de la iteracion al <li>
-                li.textContent = i;
-                // Finalmente incorporamos al <ul>
-                lista.appendChild(li);
-            }
-        }
-    </script>
     
 </body>
 </html>
